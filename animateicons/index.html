@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>Animated Icons</title>
+  <style>
+    #chain,
+    #battery,
+    #hourglass {
+      font-size: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <i id="chain" class="fa"></i>
+
+  <br><br>
+
+  <i id="battery" class="fa"></i>
+
+  <br><br>
+
+  <i id="hourglass" class="fa"></i>
+
+  <script>
+    // Break Chain Animation
+    function breakChain() {
+      let chain = document.getElementById('chain');
+      chain.innerHTML = '&#xf0c1';
+
+      setTimeout(function() {
+        chain.innerHTML = '&#xf127';
+      }, 1000);
+    }
+
+    // Call Animation
+    breakChain();
+
+    // Animate Every 2 Seconds
+    setInterval(breakChain, 2000);
+
+    // Battery Charge Animation
+    function chargeBattery() {
+      let battery = document.getElementById('battery');
+      battery.innerHTML = '&#xf244';
+      setTimeout(function() {
+        battery.innerHTML = '&#xf243';
+      }, 1000);
+      setTimeout(function() {
+        battery.innerHTML = '&#xf242';
+      }, 2000);
+      setTimeout(function() {
+        battery.innerHTML = '&#xf241';
+      }, 3000);
+      setTimeout(function() {
+        battery.innerHTML = '&#xf240';
+      }, 4000);
+    }
+
+    // Run Animation
+    chargeBattery();
+
+    // Animate Every 5 Seconds
+    setInterval(chargeBattery, 5000);
+
+    // Hourglass Tip Animation
+    function hourGlassTip() {
+      let hourglass = document.getElementById('hourglass');
+      hourglass.innerHTML = '&#xf251';
+      setTimeout(function() {
+        hourglass.innerHTML = '&#xf252';
+      }, 1000);
+      setTimeout(function() {
+        hourglass.innerHTML = '&#xf253';
+      }, 2000);
+    }
+
+    hourGlassTip();
+
+    // Animate Every 3 Seconds
+    setInterval(hourGlassTip, 3000);
+  </script>
+</body>
+
+</html>

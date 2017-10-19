@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Slideshow</title>
+</head>
+<body>
+  <img src="" alt="" name="slide" width="400" height="200">
+  <script>
+    var i = 0; // Start point
+    var images = [];
+    var time = 1000;
+
+    // Image List
+    images[0] = 'image1.jpg';
+    images[1] = 'image2.jpg';
+    images[2] = 'image3.jpg';
+    images[3] = 'image4.jpg';
+
+    // Change Image
+    function changeImg() {
+      document.slide.src = images[i];
+
+      if (i < images.length - 1) {
+        i++;
+      } else {
+        i = 0;
+      }
+
+      setTimeout('changeImg()', time);
+    }
+
+    window.onload = changeImg;
+  </script>
+</body>
+</html>
