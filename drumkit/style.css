@@ -1,0 +1,84 @@
+body {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: verdana;
+  margin: 0;
+  padding: 0;
+  background: url("img/mirrorball.jpeg") no-repeat;
+}
+
+.lowercase {
+  font-size: 12px;
+}
+
+.keys {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 10px;
+  color: white;
+  opacity: 0.8;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.key {
+  box-sizing: border-box;
+  background-color: black;
+  height: 120px;
+  width: 120px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+kbd {
+  transition: all .08s;
+  font-size: 40px;
+}
+
+.playing {
+  transform: scale(2);
+  color: #ffc600;
+}
+
+@media (max-width: 1024px) {
+  .keys {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px;
+    position: static;
+    width: 80%;
+    margin: 250px auto;
+  }
+
+  .key {
+    max-height: 120px;
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .keys {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px;
+    position: static;
+    width: 80%;
+    margin: 160px auto;
+  }
+
+  .key {
+    max-height: 55px;
+    max-width: 55px;
+    padding: 2px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+
+  kbd, .sound, .lowercase {
+    font-size: 9px;
+  }
+
+}
